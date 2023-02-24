@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clogne/common/theme/dark_theme.dart';
+import 'package:whatsapp_clogne/common/theme/light_theme.dart';
 import 'package:whatsapp_clogne/feature/welcome/pages/welcome_page.dart';
 
 void main() {
@@ -12,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WhatsApp Clogne',
-      theme: ThemeData.dark(),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
+      themeMode: ThemeMode.system,
       home: const WelcomePage(),
     );
   }
