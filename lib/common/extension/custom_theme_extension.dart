@@ -18,7 +18,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   );
 
   static const darkMode = CustomThemeExtension(
-    circleImageColor: Colours.backgroundDark,
+    circleImageColor: Colours.whatsappGreenDark,
     greyColor: Colours.greyDark,
     blueColor: Colours.blueDark,
     langButtonBackgroundColor: Color(0xFF182229),
