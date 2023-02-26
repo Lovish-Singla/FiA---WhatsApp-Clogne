@@ -15,14 +15,16 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     blueColor: Colours.blueLight,
     langButtonBackgroundColor: Color(0xFFF7F8FA),
     languageButtonHighlightColor: Color(0xFFE8E8ED),
+    authAppbarTextColor: Colours.whatsappGreenLight,
   );
 
   static const darkMode = CustomThemeExtension(
-    circleImageColor: Colours.backgroundDark,
+    circleImageColor: Colours.whatsappGreenDark,
     greyColor: Colours.greyDark,
     blueColor: Colours.blueDark,
     langButtonBackgroundColor: Color(0xFF182229),
     languageButtonHighlightColor: Color(0xFF09141A),
+    authAppbarTextColor: Color(0xFFE9EDEF),
   );
 
   final Color? circleImageColor;
@@ -30,6 +32,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
   final Color? blueColor;
   final Color? langButtonBackgroundColor;
   final Color? languageButtonHighlightColor;
+  final Color? authAppbarTextColor;
 
   const CustomThemeExtension({
     this.circleImageColor,
@@ -37,6 +40,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     this.blueColor,
     this.langButtonBackgroundColor,
     this.languageButtonHighlightColor,
+    this.authAppbarTextColor,
   });
   @override
   ThemeExtension<CustomThemeExtension> copyWith({
@@ -45,6 +49,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
     Color? blueColor,
     Color? langButtonBackgroundColor,
     Color? languageButtonHighlightColor,
+    Color? authAppbarTextColor,
   }) {
     return CustomThemeExtension(
       circleImageColor: circleImageColor ?? this.circleImageColor,
@@ -54,6 +59,7 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
           langButtonBackgroundColor ?? this.langButtonBackgroundColor,
       languageButtonHighlightColor:
           languageButtonHighlightColor ?? this.languageButtonHighlightColor,
+      authAppbarTextColor: authAppbarTextColor ?? this.authAppbarTextColor,
     );
   }
 
@@ -69,6 +75,8 @@ class CustomThemeExtension extends ThemeExtension<CustomThemeExtension> {
           langButtonBackgroundColor, other.langButtonBackgroundColor, t),
       languageButtonHighlightColor: Color.lerp(
           languageButtonHighlightColor, other.languageButtonHighlightColor, t),
+      authAppbarTextColor:
+          Color.lerp(authAppbarTextColor, other.authAppbarTextColor, t),
     );
   }
 }
