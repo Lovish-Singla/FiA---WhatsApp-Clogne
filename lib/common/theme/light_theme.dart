@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsapp_clogne/common/utils/colours.dart';
 
 import '../extension/custom_theme_extension.dart';
@@ -13,6 +14,12 @@ ThemeData lightTheme() {
     extensions: [
       CustomThemeExtension.lightMode,
     ],
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarBrightness: Brightness.dark,
+      ),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colours.whatsappGreenLight,
@@ -20,6 +27,15 @@ ThemeData lightTheme() {
         splashFactory: NoSplash.splashFactory,
         elevation: 0,
         shadowColor: Colors.transparent,
+      ),
+    ),
+    bottomSheetTheme: const BottomSheetThemeData(
+      backgroundColor: Colours.backgroundLight,
+      modalBackgroundColor: Colours.backgroundLight,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(20),
+        ),
       ),
     ),
   );
